@@ -25,9 +25,9 @@
         android:textSize="20sp"
         android:ems="10"
         android:inputType="text"
-        android:textColor="@color/gray"
+        android:textColor="@color/black"
         android:textAlignment="center"
-        android:text="Recipe Name"/>
+        android:hint="Recipe Name"/>
 
     <TextView
         android:id="@+id/eventDateTV"
@@ -35,7 +35,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="@string/date"
+        android:text="Start Date:"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/amountDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Amount of Days:"
         android:textSize="20sp"
         android:textAlignment="center"
         android:textColor="@color/black"/>
@@ -50,6 +61,17 @@
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="10dp"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/mealType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Meal:"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
 
     <Spinner
         android:id="@+id/eventTimeSpinner"
