@@ -51,7 +51,7 @@ public class EventEditActivity extends AppCompatActivity
 
 
         time = "Breakfast";
-        eventDateTV.setText("Date: " + CalendarUtils.formattedDate(CalendarUtils.selectedDate));
+        eventDateTV.setText("Start Date: " + CalendarUtils.formattedDate(CalendarUtils.selectedDate));
         //eventTimeTV.setText("Meal: " + time);
     }
 
@@ -79,6 +79,7 @@ public class EventEditActivity extends AppCompatActivity
     public void backEventAction(View view)
     {
         setContentView(R.layout.activity_week_view);
+        finish();
 
     }
 
