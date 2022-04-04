@@ -16,9 +16,7 @@ import java.util.ArrayList;
 import static com.ui.preppal.CalendarUtils.daysInWeekArray;
 import static com.ui.preppal.CalendarUtils.monthYearFromDate;
 
-import com.ui.preppal.lunch.LunchFragment;
-
-public class WeekViewActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
+public class LunchActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
@@ -28,7 +26,7 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week_view);
+        setContentView(R.layout.lunch_fragment);
         initWidgets();
         setWeekView();
     }
@@ -91,8 +89,8 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
         startActivity(new Intent(this, EventEditActivity.class));
     }
 
-    public void goToLunchPage(View view) {
-        startActivity(new Intent(this, LunchActivity.class));
+    public void goToBreakfastPage(View view) {
+        startActivity(new Intent(this, WeekViewActivity.class));
     }
 
     public void goToDinnerPage(View view) {

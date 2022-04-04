@@ -1,12 +1,15 @@
 package com.ui.preppal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.time.LocalDate;
@@ -15,23 +18,26 @@ import java.util.ArrayList;
 import static com.ui.preppal.CalendarUtils.daysInMonthArray;
 import static com.ui.preppal.CalendarUtils.monthYearFromDate;
 
+import com.ui.preppal.lunch.LunchFragment;
+
 public class MainActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
 
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
-
+    Button callLunch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         startActivity(new Intent(this, WeekViewActivity.class));
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week_view);
+        setContentView(R.layout.lunch_fragment);
         initWidgets();
         CalendarUtils.selectedDate = LocalDate.now();
         setMonthView();
-
+//        callLunch = findViewById(R.id.lunch);
+//        callLunch.setOnClickListener(this);
     }
 
     private void initWidgets()
@@ -76,6 +82,14 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
     public void weeklyAction(View view)
     {
         startActivity(new Intent(this, WeekViewActivity.class));
+    }
+
+//    @Override
+    public void goToLunchPage(View view) {
+//        if (view.getId()==R.id.lunch) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.weekly, new LunchFragment()).commit();
+            startActivity(new Intent(this, LunchActivity.class));
+//        }
     }
 }
 

@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalendarAppExample">
-        <activity android:name="com.ui.preppal.EventEditActivity"></activity>
-        <activity android:name="com.ui.preppal.WeekViewActivity" />
-        <activity android:name="com.ui.preppal.MainActivity">
+        <activity
+            android:name=".DinnerActivity"
+            android:exported="false" />
+        <activity android:name=".LunchActivity" />
+        <activity android:name=".EventEditActivity" />
+        <activity android:name=".WeekViewActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
