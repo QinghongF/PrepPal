@@ -72,7 +72,7 @@ public class EventEditActivity extends AppCompatActivity
             Event newEvent = new Event(eventName, current, time);
             Event.eventsList.add(newEvent);
             current = current.plusDays(1);
-        }
+        }//
         finish();
     }
 
